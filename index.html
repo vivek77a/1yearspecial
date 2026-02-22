@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Happy 1 Year Bubbu ❤️</title>
+
+<style>
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    text-align:center;
+    overflow:hidden;
+    background: linear-gradient(-45deg, #ffdde1, #ee9ca7, #ffd1dc, #ffc3a0);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+h1{
+    margin-top:40px;
+    font-size:40px;
+    color:white;
+}
+
+p{
+    font-size:20px;
+    color:white;
+    width:80%;
+    margin:auto;
+}
+
+button{
+    padding:12px 25px;
+    font-size:18px;
+    border:none;
+    border-radius:25px;
+    background:white;
+    color:#ff4d6d;
+    cursor:pointer;
+    margin-top:20px;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#ff4d6d;
+    color:white;
+}
+
+#surprise{
+    display:none;
+    margin-top:20px;
+    font-size:22px;
+    color:white;
+}
+
+.photo-section{
+    margin-top:20px;
+}
+
+.photo-section img{
+    width:200px;
+    height:200px;
+    object-fit:cover;
+    border-radius:20px;
+    margin:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Hearts Animation */
+.heart{
+    position:fixed;
+    bottom:-10px;
+    font-size:20px;
+    animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp{
+    0%{transform:translateY(0) rotate(0deg);}
+    100%{transform:translateY(-100vh) rotate(360deg);}
+}
+</style>
+</head>
+
+<body>
+
+<h1>Happy 1st Anniversary Bubbu ❤️</h1>
+
+<p>
+It's been 1 whole year since we met...  
+And every single day with you feels like magic. ✨  
+You are my happiness, my peace, my favorite notification,  
+and the cutest thing that ever happened to me. 🥹💕
+</p>
+
+<div class="photo-section">
+    <!-- Yaha apni photos ke naam daal dena -->
+    <img src="photo1.jpg">
+    <img src="photo2.jpg">
+</div>
+
+<button onclick="showSurprise()">Open Surprise 🎁</button>
+
+<div id="surprise">
+    I promise to annoy you, love you, support you,  
+    and stay with you for many more anniversaries. 💍💕  
+    I Love You So Much Bubbu ❤️
+</div>
+
+<script>
+function showSurprise(){
+    document.getElementById("surprise").style.display="block";
+    createConfetti();
+}
+
+function createConfetti(){
+    for(let i=0;i<50;i++){
+        let conf=document.createElement("div");
+        conf.innerHTML="💖";
+        conf.className="heart";
+        conf.style.left=Math.random()*100+"vw";
+        conf.style.fontSize=Math.random()*20+15+"px";
+        conf.style.animationDuration=Math.random()*3+3+"s";
+        document.body.appendChild(conf);
+    }
+}
+</script>
+
+</body>
+</html>
